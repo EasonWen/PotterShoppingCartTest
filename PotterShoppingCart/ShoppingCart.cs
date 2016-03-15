@@ -15,7 +15,7 @@ namespace PotterShoppingCart
             while (_order.Count > 0)
             {
                 var uniqueItems = new HashSet<int>(_order); //過濾連續買的集數
-                var discount = Discount(uniqueItems.Count); //折扣
+                var discount = GetDiscount(uniqueItems.Count); //折扣
                 foreach (var item in uniqueItems)
                 {
                     _order.Remove(item);
@@ -32,7 +32,7 @@ namespace PotterShoppingCart
             _order.Add(bookSetNum);
         }
 
-        private double Discount(int bookAmount)
+        private double GetDiscount(int bookAmount)
         {
             double discount = 1;
 
