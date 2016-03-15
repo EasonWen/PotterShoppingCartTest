@@ -6,7 +6,7 @@ namespace PotterShoppingCart
 {
     public class ShoppingCart
     {
-        private List<int> _order = new List<int>();
+        private List<int> _order = new List<int>(); //訂單
 
         public double CheckOut()
         {
@@ -49,9 +49,6 @@ namespace PotterShoppingCart
             }
             return discount;
         }
-
-
-
     }
 
 }
